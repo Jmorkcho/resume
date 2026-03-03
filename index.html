@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yordan Petkov - DevOps Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        header {
+            text-align: center;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .contact-info {
+            font-size: 0.95em;
+            color: #666;
+        }
+        
+        .contact-info a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        section {
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            font-size: 1.5em;
+            color: #667eea;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        h3 {
+            font-size: 1.1em;
+            color: #333;
+            margin-top: 12px;
+            margin-bottom: 5px;
+        }
+        
+        .job-title {
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .company {
+            color: #667eea;
+            font-weight: 600;
+        }
+        
+        .date {
+            color: #999;
+            font-style: italic;
+            font-size: 0.95em;
+        }
+        
+        .location {
+            color: #666;
+            font-size: 0.95em;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+        
+        li {
+            margin-bottom: 6px;
+            color: #555;
+            line-height: 1.5;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        .skill-category {
+            background: #f8f9fa;
+            padding: 12px;
+            border-left: 4px solid #667eea;
+            border-radius: 4px;
+        }
+        
+        .skill-category strong {
+            color: #667eea;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .skill-category p {
+            font-size: 0.95em;
+            color: #555;
+            line-height: 1.4;
+        }
+        
+        .certifications-list {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        
+        .cert-item {
+            margin-bottom: 12px;
+            border-left: 3px solid #667eea;
+            padding-left: 12px;
+        }
+        
+        .cert-name {
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .cert-issuer {
+            color: #667eea;
+            font-size: 0.95em;
+        }
+        
+        .cert-date {
+            color: #999;
+            font-size: 0.9em;
+        }
+        
+        .competencies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .competency-tag {
+            background: #667eea;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        
+        .degree {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        
+        .degree-title {
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .degree-school {
+            color: #667eea;
+            font-weight: 600;
+        }
+        
+        .degree-years {
+            color: #999;
+            font-size: 0.95em;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 25px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .competencies {
+                flex-direction: column;
+            }
+        }
+        
+        .summary {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            padding: 15px;
+            border-radius: 4px;
+            line-height: 1.7;
+            color: #555;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #999;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>YORDAN PETKOV</h1>
+            <div class="subtitle">DevOps Engineer | Cloud Solutions Architect</div>
+            <div class="contact-info">
+                Sofia, Bulgaria | <a href="https://www.linkedin.com/in/yordan-petkov-276470156/" target="_blank">LinkedIn Profile</a>
+            </div>
+        </header>
+
+        <!-- Professional Summary -->
+        <section>
+            <h2>Professional Summary</h2>
+            <div class="summary">
+                Passionate and results-driven DevOps Engineer with extensive expertise in Microsoft Azure and Amazon Web Services (AWS). Proven ability to troubleshoot complex technical issues and deliver efficient solutions. Committed to continuous learning, delivering top-notch customer support, and building strong client relationships. Proactive problem-solver with a collaborative approach and proven track record of ensuring smooth cloud operations at scale.
+            </div>
+        </section>
+
+        <!-- Professional Experience -->
+        <section>
+            <h2>Professional Experience</h2>
+            
+            <div>
+                <h3><span class="job-title">DevOps Engineer</span> | <span class="company">Reward Gateway</span></h3>
+                <div class="date">May 2024 – Present</div>
+                <div class="location">Hybrid</div>
+                <ul>
+                    <li>Utilized Docker and Kubernetes for containerization and orchestration, enabling scalable and efficient application deployment</li>
+                    <li>Implemented Terraform for infrastructure provisioning and management, ensuring consistent and repeatable deployments across environments</li>
+                    <li>Developed and maintained robust CI/CD pipelines using GoCD and Bash scripting to support rapid and reliable software releases</li>
+                    <li>Automated various development workflows with Python, significantly enhancing efficiency and minimizing manual tasks</li>
+                    <li>Implemented New Relic, Datadog, CloudWatch, and Kibana for comprehensive logging and monitoring, improving system visibility and performance insights</li>
+                    <li>Collaborated with development, operations, and management teams to streamline processes and enhance overall productivity</li>
+                    <li>Integrated Cypress tests and utilized Android/iOS emulators with QA teams to strengthen testing coverage</li>
+                    <li>Deployed AWS Lambda functions for serverless computing, enabling efficient event-driven execution and accelerating deployment speed</li>
+                </ul>
+            </div>
+
+            <div style="margin-top: 15px;">
+                <h3><span class="job-title">Cloud Support Engineer</span> | <span class="company">Adastra Bulgaria</span></h3>
+                <ul>
+                    <li>Provided technical support for Azure infrastructure, including IAM, networking, virtual machines, and Azure DevOps Services</li>
+                    <li>Managed Azure SQL Server databases and optimized stored procedures for improved performance</li>
+                    <li>Implemented security operations utilizing Microsoft Defender and Microsoft Sentinel</li>
+                    <li>Assisted in Azure architectural design decisions supporting organization objectives</li>
+                </ul>
+            </div>
+
+            <div style="margin-top: 15px;">
+                <h3><span class="job-title">Process Engineer</span> | <span class="company">Robertshaw</span></h3>
+                <div class="date">Feb 2021 – Jul 2021</div>
+                <div class="location">Plovdiv, Bulgaria · On-site</div>
+                <ul>
+                    <li>Streamlined operational processes, resulting in enhanced efficiency and productivity</li>
+                    <li>Implemented Lean management principles to optimize resource utilization and workflow</li>
+                    <li>Fine-tuned production quotas and norms to maximize output and meet organizational objectives</li>
+                    <li>Incorporated ergonomic practices to improve workplace efficiency and employee well-being</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Technical Skills -->
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <strong>Cloud Platforms</strong>
+                    <p>Microsoft Azure, Amazon Web Services (AWS), Azure Synapse Analytics</p>
+                </div>
+                <div class="skill-category">
+                    <strong>DevOps & Automation</strong>
+                    <p>Docker, Kubernetes, Terraform, CI/CD, GoCD, Bash Scripting</p>
+                </div>
+                <div class="skill-category">
+                    <strong>Monitoring & Logging</strong>
+                    <p>New Relic, Datadog, CloudWatch, Kibana</p>
+                </div>
+                <div class="skill-category">
+                    <strong>Languages & Scripting</strong>
+                    <p>Python, PowerShell, SQL, Bash</p>
+                </div>
+                <div class="skill-category">
+                    <strong>Azure Services</strong>
+                    <p>Azure DevOps Services, Virtual Machines, SQL, Azure Architect, Azure Active Directory, Data Lake Storage</p>
+                </div>
+                <div class="skill-category">
+                    <strong>AWS Services</strong>
+                    <p>Amazon EKS, AWS Lambda, IAM, Networking</p>
+                </div>
+                <div class="skill-category">
+                    <strong>Databases</strong>
+                    <p>Microsoft SQL Server, Azure SQL</p>
+                </div>
+                <div class="skill-category">
+                    <strong>Security</strong>
+                    <p>Microsoft Defender, Microsoft Sentinel, IAM, Security Operations</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section>
+            <h2>Certifications</h2>
+            <div class="certifications-list">
+                <div class="cert-item">
+                    <div class="cert-name">AWS Certified DevOps Engineer – Professional</div>
+                    <div class="cert-issuer">Amazon Web Services</div>
+                    <div class="cert-date">2026</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-name">AWS Certified SysOps Administrator – Associate</div>
+                    <div class="cert-issuer">Amazon Web Services</div>
+                    <div class="cert-date">2026</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-name">Microsoft Certified: DevOps Engineer Expert</div>
+                    <div class="cert-issuer">Microsoft</div>
+                    <div class="cert-date">Issued: Mar 2024, Expires: Mar 2025</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-name">Microsoft Certified: Azure Solutions Architect Expert</div>
+                    <div class="cert-issuer">Microsoft</div>
+                    <div class="cert-date">Issued: Feb 2023, Expires: Feb 2025</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-name">Microsoft Certified: Azure Administrator Associate</div>
+                    <div class="cert-issuer">Microsoft</div>
+                    <div class="cert-date">Issued: Apr 2022, Expires: Apr 2025</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-name">Microsoft Certified: Security Operations Analyst Associate</div>
+                    <div class="cert-issuer">Microsoft</div>
+                    <div class="cert-date">Issued: Oct 2022</div>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-name">Microsoft Certified: Azure Fundamentals</div>
+                    <div class="cert-issuer">Microsoft</div>
+                    <div class="cert-date">Issued: Jan 2023</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section>
+            <h2>Education</h2>
+            <div class="degree">
+                <div class="degree-title">Bachelor of Engineering (BE) in Industrial Engineering</div>
+                <div class="degree-school">Technical University of Sofia</div>
+                <div class="degree-years">2015 – 2019</div>
+            </div>
+        </section>
+
+        <!-- Core Competencies -->
+        <section>
+            <h2>Core Competencies</h2>
+            <div class="competencies">
+                <div class="competency-tag">Infrastructure as Code</div>
+                <div class="competency-tag">Cloud Architecture</div>
+                <div class="competency-tag">DevOps Best Practices</div>
+                <div class="competency-tag">CI/CD Pipelines</div>
+                <div class="competency-tag">Troubleshooting</div>
+                <div class="competency-tag">Technical Leadership</div>
+                <div class="competency-tag">Collaboration</div>
+                <div class="competency-tag">Scalable Systems</div>
+                <div class="competency-tag">Cost Optimization</div>
+                <div class="competency-tag">Security & Compliance</div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Last updated: March 2026</p>
+        </footer>
+    </div>
+</body>
+</html>
